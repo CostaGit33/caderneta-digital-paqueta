@@ -1,137 +1,16 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#173d2b">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <title>Caderneta Digital Paquetá</title>
-</head>
-<body>
-  <header>
-    <div class="sun-logo" aria-hidden="true"><span></span></div>
-    <div class="brand-name">
-      <b>Café<br>Jequié</b>
-      <small>CADERNETA DIGITAL</small>
-    </div>
-    <button id="admin">Área da equipe</button>
-  </header>
-
-  <main>
-    <section id="welcome" class="hero">
-      <p class="eyebrow">PROGRAMA DE FIDELIDADE · DEMONSTRAÇÃO</p>
-      <h1>Mais sabor,<br><em>mais conquistas.</em></h1>
-      <p>Sua jornada de sabor e prêmios começa aqui. Colecione carimbos, conquiste recompensas e viva uma experiência única.</p>
-      <button class="primary" id="start">Acessar minha caderneta →</button>
-      <small class="note">Protótipo para avaliação interna. Não é uma campanha oficial.</small>
-      <div class="hero-sun" aria-hidden="true"><span></span></div>
-      <div class="hero-coffee" aria-hidden="true">☕</div>
-    </section>
-
-    <section id="profile" class="card hidden">
-      <p class="eyebrow">SUA CONTA</p>
-      <h2>Crie sua caderneta</h2>
-      <form id="form">
-        <label>Nome<input id="name" required maxlength="70" placeholder="Seu nome"></label>
-        <label>E-mail (opcional)<input id="email" type="email" placeholder="voce@exemplo.com"></label>
-        <label class="check"><input type="checkbox" required> Concordo com o uso dos dados fictícios neste protótipo.</label>
-        <button class="primary">Continuar</button>
-      </form>
-      <small class="note">Não informe dados pessoais reais. Os dados ficam somente neste navegador.</small>
-    </section>
-
-    <section id="app" class="hidden">
-      <div class="heading">
-        <div>
-          <p class="eyebrow">MINHA CONTA</p>
-          <h2>Olá, <span id="person"></span>!</h2>
-        </div>
-        <button id="edit">Editar perfil</button>
-      </div>
-
-      <div class="stats">
-        <div class="stat dark">
-          <small>CARIMBOS</small>
-          <b id="count">0</b>
-          <small>nesta campanha</small>
-        </div>
-        <div class="stat">
-          <small>PRÓXIMA RECOMPENSA</small>
-          <b id="left">5</b>
-          <small>carimbos para liberar</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <p class="eyebrow">SUA CADERNETA</p>
-        <h2>Complete a coleção</h2>
-        <div id="stamps" class="stamps"></div>
-        <small class="note">No piloto real, a etiqueta NFC/QR precisará de validação segura no servidor.</small>
-      </div>
-
-      <div class="columns">
-        <div class="card">
-          <p class="eyebrow">REGISTRAR CARIMBO</p>
-          <h2>Visita à loja</h2>
-          <label>Loja de demonstração
-            <select id="store">
-              <option value="Mercado Centro">Mercado Centro</option>
-              <option value="Super Bahia">Super Bahia</option>
-              <option value="Mercado da Praia">Mercado da Praia</option>
-            </select>
-          </label>
-          <button id="nfc" class="primary">Simular leitura NFC</button>
-          <label>Código de teste<input id="token" placeholder="PAQUETA-123"></label>
-          <button id="validate">Validar código</button>
-          <p id="message" role="status"></p>
-        </div>
-
-        <div class="card">
-          <p class="eyebrow">RECOMPENSAS</p>
-          <h2>Seus objetivos</h2>
-          <div id="rewards"></div>
-          <small class="note">Recompensas ilustrativas, sem valor comercial.</small>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="heading">
-          <h2>Histórico</h2>
-          <button id="reset">Reiniciar demo</button>
-        </div>
-        <div id="history"></div>
-      </div>
-    </section>
-
-    <section id="adminView" class="hidden">
-      <p class="eyebrow">PAINEL INTERNO · DEMONSTRAÇÃO</p>
-      <h2>Visão da campanha</h2>
-      <div class="warning">Este painel não tem autenticação real nem banco de dados central. Não use em produção.</div>
-      <div class="stats">
-        <div class="stat"><small>PARTICIPANTES NESTE NAVEGADOR</small><b id="aUsers">0</b></div>
-        <div class="stat"><small>CARIMBOS</small><b id="aStamps">0</b></div>
-        <div class="stat"><small>RESGATES</small><b id="aRewards">0</b></div>
-      </div>
-
-      <div class="card">
-        <h2>Lojas de teste</h2>
-        <p>Mercado Centro · Super Bahia · Mercado da Praia</p>
-        <button id="export">Exportar relatório CSV</button>
-        <h2>Antes de lançar</h2>
-        <ul>
-          <li>Backend e banco compartilhado</li>
-          <li>Login seguro e permissões administrativas</li>
-          <li>Tokens NFC/QR validados no servidor</li>
-          <li>Regras, recompensas e regulamento aprovados</li>
-          <li>Revisão de privacidade, LGPD e segurança</li>
-        </ul>
-        <button id="back">Voltar à caderneta</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>Café Jequié · Protótipo conceitual v0.2</footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#35180d"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><title>Café Jequié — Caderneta Digital</title></head><body>
+<header><button class="brand" data-go="welcome"><span class="sun"><i></i></span><b>Café<br>Jequié</b></button><div class="slogan"><strong>Mais sabor,<br>mais conquistas.</strong><span>Sua jornada de sabor e prêmios começa aqui.</span></div><div class="coffee">☕<small>● ● ●</small></div></header>
+<main><nav id="nav"><button data-go="home">⌂<small>Início</small></button><button data-go="book">✳<small>Caderneta</small></button><button data-go="stores">⌖<small>Lojas</small></button><button data-go="rewards">♙<small>Recompensas</small></button><button data-go="profile">○<small>Perfil</small></button></nav>
+<section id="welcome" class="screen"><div class="welcome"><div><p class="eyebrow">CADERNETA DIGITAL · CAFÉ JEQUIÉ</p><h1>O sabor do nosso café<br><em>te leva mais longe.</em></h1><p>Participe da nossa jornada, colecione carimbos, desbloqueie recompensas e viva essa experiência única.</p><button class="yellow" data-go="signup">Começar →</button><small>Protótipo demonstrativo — campanha não oficial.</small></div><div class="heroart"><div class="sun big"><i></i></div><span>☕</span><small>●　●　●<br>　●　●</small></div></div></section>
+<section id="signup" class="screen"><div class="auth"><div class="auth-art"><div class="sun big"><i></i></div><h2>Café<br>Jequié</h2><p>Mais sabor, mais conquistas.</p></div><div class="panel"><p class="eyebrow">BEM-VINDO(A)</p><h2>Criar sua conta</h2><p class="muted">É rápido e fácil. Vamos começar?</p><form id="signupForm"><label>Nome completo<input id="name" required placeholder="Seu nome"></label><label>E-mail ou celular<input id="contact" required placeholder="seu@email.com ou telefone"></label><label>Data de nascimento (opcional)<input type="date" id="birth"></label><label class="terms"><input type="checkbox" required> Li e aceito os Termos de Uso e a Política de Privacidade.</label><button class="brown full">Cadastrar</button></form><p class="center">Já tem uma conta? <button class="link" data-go="login">Entrar</button></p><small class="fine">Use dados fictícios neste protótipo.</small></div></div></section>
+<section id="login" class="screen"><div class="panel narrow"><button class="link" data-go="signup">← Voltar</button><p class="eyebrow">SUA CONTA</p><h2>Entrar na caderneta</h2><form id="loginForm"><label>Nome<input id="loginName" required></label><button class="brown full">Entrar</button></form></div></section>
+<section id="home" class="screen"><div class="heading"><div><p class="eyebrow">SUA JORNADA COMEÇA AQUI</p><h1>Olá, <span id="hello">Mariana</span>!</h1><p class="muted">Sua jornada está só começando.</p></div><button class="avatar" data-go="profile" id="avatar">M</button></div><div class="homegrid"><article class="highlight"><div><p class="eyebrow light">SUA CADERNETA</p><h2><span id="countHome">3</span> / 5 carimbos</h2><div class="progress"><i id="progHome"></i></div><button class="yellow small" data-go="book">Ver caderneta →</button></div><span class="gift">🎁</span></article><article class="promo"><p class="eyebrow light">COLECIONE MOMENTOS</p><h2>Colecione carimbos,<br>conquiste prêmios!</h2><button class="yellow small" data-go="rewards">Ver prêmios</button></article></div><div class="heading"><h2>Lojas participantes</h2><button class="link" data-go="stores">Ver todas ›</button></div><div class="retailers"><b>Extra</b><b>Assaí</b><b>Atacadão</b><b>Super Jequié</b></div><div class="quick"><button data-go="nfc">◎ Ler ponto NFC / QR</button><button data-go="book">✳ Minha caderneta</button><button data-go="rewards">♙ Minhas recompensas</button></div></section>
+<section id="nfc" class="screen"><div class="panel nfc"><button class="link" data-go="home">← Voltar</button><p class="eyebrow">PONTO DE CARIMBO</p><h2>Ler ponto</h2><div class="orbit"><span>)))</span><b>◎</b></div><h3>Aproxime seu celular<br>do ponto NFC</h3><p class="muted">Ou digite o código do ponto</p><form id="tokenForm"><input id="token" placeholder="Ex.: JEQUIE-123"><button class="yellow full">Validar</button></form><p id="msg" class="muted"></p><small class="fine">Códigos de teste: JEQUIE-123, JEQUIE-456, JEQUIE-789.</small><button class="link" data-go="offline">Simular modo offline</button></div></section>
+<section id="book" class="screen"><div class="heading"><div><p class="eyebrow">SUA COLEÇÃO</p><h1>Minha caderneta</h1></div><button class="brown small" data-go="nfc">+ Ler ponto</button></div><div class="panel"><div id="stamps" class="stamps"></div><div class="journey"><span class="gift">🎁</span><div><h3>Jornada Jequié</h3><p>Complete 5 carimbos e conquiste prêmios.</p><div class="progress"><i id="progBook"></i></div><small><span id="countBook">0</span>/5</small></div></div><div class="next">📍 <div><b>Próxima etapa</b><p>Visite uma loja participante e colecione seu próximo carimbo.</p></div><button class="link" data-go="stores">Ver lojas ›</button></div></div></section>
+<section id="rewards" class="screen"><div class="heading"><div><p class="eyebrow">TROQUE SEUS CARIMBOS</p><h1>Recompensas</h1></div></div><div class="filters"><button class="sel">Todas</button><button>Disponíveis</button><button>Resgatadas</button></div><div id="rewardList" class="rewardgrid"></div><p class="fine">Recompensas ilustrativas, sujeitas à aprovação e regulamento.</p></section>
+<section id="stores" class="screen"><p class="eyebrow">PERTO DE VOCÊ</p><h1>Lojas participantes</h1><input id="search" placeholder="⌕ Buscar loja..."><div id="storeList" class="storelist"></div><button class="brown full" data-go="nfc">⌖ Ler ponto na loja</button></section>
+<section id="profile" class="screen"><div class="panel narrow"><button class="link" data-go="home">← Voltar</button><p class="eyebrow">SUA CONTA</p><div class="profile"><span id="profileAvatar">M</span><div><h2 id="profileName">Mariana Silva</h2><p id="profileContact" class="muted">Conta de demonstração</p></div></div><button class="outline full" id="edit">✎ Editar perfil</button><div class="menu"><button data-go="book">▤ <span>Minha caderneta<small id="profileCount">0 / 5 carimbos</small></span>›</button><button data-go="rewards">♙ <span>Meus prêmios</span>›</button><button>♧ <span>Notificações</span>›</button><button>▤ <span>Termos e privacidade</span>›</button><button>ⓘ <span>Ajuda</span>›</button><button id="logout">⇥ <span>Sair</span></button></div></div></section>
+<section id="success" class="screen"><div class="panel result"><div class="sun big"><i></i></div><h1>Parabéns!</h1><h3>Você ganhou um carimbo!</h3><p id="successStore" class="muted"></p><p id="successDate" class="fine"></p><button class="yellow full" data-go="book">Ver caderneta</button><button class="link" data-go="home">Voltar para o início</button></div></section>
+<section id="offline" class="screen"><div class="panel result"><div class="offlineicon">☹</div><h2>Sem conexão</h2><p>Você está offline. A leitura será validada quando a conexão for restabelecida.</p><button class="yellow full" id="retry">Tentar novamente</button><button class="outline full" data-go="home">Continuar offline</button></div></section>
+<section id="admin" class="screen"><div class="admin"><aside><div class="adminlogo"><span class="sun"><i></i></span><b>Café<br>Jequié</b></div><h3>Painel Administrativo</h3><p>▦ Dashboard</p><p>▤ Campanhas</p><p>⌖ Lojas</p><p>♙ Participantes</p><p>♧ Recompensas</p><p>▣ Resgates</p><p>▥ Relatórios</p><p>⚙ Configurações</p></aside><div class="dash"><div class="heading"><div><p class="eyebrow">VISÃO GERAL</p><h1>Dashboard</h1></div><span>Campanha: Jornada Jequié</span></div><div class="metrics"><article><small>Participantes</small><b id="mUsers">1.248</b><em>↑ 12%</em></article><article><small>Carimbos validados</small><b id="mStamps">4.892</b><em>↑ 18%</em></article><article><small>Resgates</small><b id="mRedeem">312</b><em>↑ 8%</em></article></div><div class="panel"><h3>Evolução da campanha</h3><svg viewBox="0 0 500 160" class="chart"><path d="M10 145 L75 125 L140 105 L205 85 L270 68 L335 45 L400 25 L480 7 L480 155 L10 155Z" fill="#3d7650" opacity=".12"/><path d="M10 145 L75 125 L140 105 L205 85 L270 68 L335 45 L400 25 L480 7" fill="none" stroke="#3d7650" stroke-width="4"/></svg><small class="fine">Dados fictícios para demonstração do layout.</small></div><div class="panel"><h3>Lojas mais ativas</h3><p class="active">Super Jequié <b>1.246</b></p><p class="active">Extra <b>982</b></p><p class="active">Assaí <b>876</b></p><p class="active">Atacadão <b>643</b></p><button id="export" class="brown">Exportar CSV de teste</button></div></div></div></section>
+</main><footer><div><span class="sun"><i></i></span><b>Café Jequié</b></div><p>Uma campanha que conecta sabor, pessoas e resultados.</p><small>Protótipo demonstrativo · não é uma campanha oficial</small><button class="adminlink" data-go="admin">Painel administrativo</button></footer><script src="app.js"></script></body></html>
