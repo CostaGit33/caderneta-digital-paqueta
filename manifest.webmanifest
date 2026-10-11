@@ -1,0 +1,18 @@
+{
+  "name": "Caderneta Digital Café Jequié",
+  "short_name": "Café Jequié",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f0df",
+  "theme_color": "#3b1f12",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "description": "Protótipo PWA de fidelidade do Café Jequié"
+}
