@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173d2b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>Caderneta Digital Paquetá</title>
+</head>
+<body>
+  <header>
+    <div class="sun-logo" aria-hidden="true"><span></span></div>
+    <div class="brand-name">
+      <b>Café<br>Jequié</b>
+      <small>CADERNETA DIGITAL</small>
+    </div>
+    <button id="admin">Área da equipe</button>
+  </header>
+
+  <main>
+    <section id="welcome" class="hero">
+      <p class="eyebrow">PROGRAMA DE FIDELIDADE · DEMONSTRAÇÃO</p>
+      <h1>Mais sabor,<br><em>mais conquistas.</em></h1>
+      <p>Sua jornada de sabor e prêmios começa aqui. Colecione carimbos, conquiste recompensas e viva uma experiência única.</p>
+      <button class="primary" id="start">Acessar minha caderneta →</button>
+      <small class="note">Protótipo para avaliação interna. Não é uma campanha oficial.</small>
+      <div class="hero-sun" aria-hidden="true"><span></span></div>
+      <div class="hero-coffee" aria-hidden="true">☕</div>
+    </section>
+
+    <section id="profile" class="card hidden">
+      <p class="eyebrow">SUA CONTA</p>
+      <h2>Crie sua caderneta</h2>
+      <form id="form">
+        <label>Nome<input id="name" required maxlength="70" placeholder="Seu nome"></label>
+        <label>E-mail (opcional)<input id="email" type="email" placeholder="voce@exemplo.com"></label>
+        <label class="check"><input type="checkbox" required> Concordo com o uso dos dados fictícios neste protótipo.</label>
+        <button class="primary">Continuar</button>
+      </form>
+      <small class="note">Não informe dados pessoais reais. Os dados ficam somente neste navegador.</small>
+    </section>
+
+    <section id="app" class="hidden">
+      <div class="heading">
+        <div>
+          <p class="eyebrow">MINHA CONTA</p>
+          <h2>Olá, <span id="person"></span>!</h2>
+        </div>
+        <button id="edit">Editar perfil</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat dark">
+          <small>CARIMBOS</small>
+          <b id="count">0</b>
+          <small>nesta campanha</small>
+        </div>
+        <div class="stat">
+          <small>PRÓXIMA RECOMPENSA</small>
+          <b id="left">5</b>
+          <small>carimbos para liberar</small>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="eyebrow">SUA CADERNETA</p>
+        <h2>Complete a coleção</h2>
+        <div id="stamps" class="stamps"></div>
+        <small class="note">No piloto real, a etiqueta NFC/QR precisará de validação segura no servidor.</small>
+      </div>
+
+      <div class="columns">
+        <div class="card">
+          <p class="eyebrow">REGISTRAR CARIMBO</p>
+          <h2>Visita à loja</h2>
+          <label>Loja de demonstração
+            <select id="store">
+              <option value="Mercado Centro">Mercado Centro</option>
+              <option value="Super Bahia">Super Bahia</option>
+              <option value="Mercado da Praia">Mercado da Praia</option>
+            </select>
+          </label>
+          <button id="nfc" class="primary">Simular leitura NFC</button>
+          <label>Código de teste<input id="token" placeholder="PAQUETA-123"></label>
+          <button id="validate">Validar código</button>
+          <p id="message" role="status"></p>
+        </div>
+
+        <div class="card">
+          <p class="eyebrow">RECOMPENSAS</p>
+          <h2>Seus objetivos</h2>
+          <div id="rewards"></div>
+          <small class="note">Recompensas ilustrativas, sem valor comercial.</small>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="heading">
+          <h2>Histórico</h2>
+          <button id="reset">Reiniciar demo</button>
+        </div>
+        <div id="history"></div>
+      </div>
+    </section>
+
+    <section id="adminView" class="hidden">
+      <p class="eyebrow">PAINEL INTERNO · DEMONSTRAÇÃO</p>
+      <h2>Visão da campanha</h2>
+      <div class="warning">Este painel não tem autenticação real nem banco de dados central. Não use em produção.</div>
+      <div class="stats">
+        <div class="stat"><small>PARTICIPANTES NESTE NAVEGADOR</small><b id="aUsers">0</b></div>
+        <div class="stat"><small>CARIMBOS</small><b id="aStamps">0</b></div>
+        <div class="stat"><small>RESGATES</small><b id="aRewards">0</b></div>
+      </div>
+
+      <div class="card">
+        <h2>Lojas de teste</h2>
+        <p>Mercado Centro · Super Bahia · Mercado da Praia</p>
+        <button id="export">Exportar relatório CSV</button>
+        <h2>Antes de lançar</h2>
+        <ul>
+          <li>Backend e banco compartilhado</li>
+          <li>Login seguro e permissões administrativas</li>
+          <li>Tokens NFC/QR validados no servidor</li>
+          <li>Regras, recompensas e regulamento aprovados</li>
+          <li>Revisão de privacidade, LGPD e segurança</li>
+        </ul>
+        <button id="back">Voltar à caderneta</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>Café Jequié · Protótipo conceitual v0.2</footer>
+  <script src="app.js"></script>
+</body>
+</html>
